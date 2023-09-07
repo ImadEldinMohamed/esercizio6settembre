@@ -1,0 +1,36 @@
+esercizio 6 settembre
+SELECT COUNT(*) as totale FROM Orders
+
+SELECT COUNT(*) as Totale FROM Customers
+
+SELECT Count(*) as abitantilondra , City  FROM Customers
+GROUP by City
+Having City='London'
+
+SELECT AVG(freight) as media FROM orders
+
+Select AVG(freight) as media , CustomerID FROM Orders
+GROUP by CustomerID
+Having CustomerID= 'BOTTM'
+
+SELECT SUM(freight) as somma ,CustomerID FROM orders
+GROUP by CustomerID
+
+SELECT COUNT(city) as clienti , City FROM Customers
+Group by City
+
+SELECT SUM(UnitPrice * Quantity) as totale , OrderID from [Order Details]
+group by OrderID
+
+SELECT SUM(UnitPrice * Quantity) as totale10248 , OrderID from [Order Details]
+group by OrderID
+HAVING OrderID= '10248'
+
+SELECT COUNT(CategoryID) as censiti ,CategoryID from products
+GROUP by CategoryID
+
+SELECT COUNT(ShipCountry) as ordini,ShipCountry from Orders
+GROUP by ShipCountry
+
+SELECT AVG(Freight) as costotrasporti , ShipCountry from Orders
+GROUP by ShipCountry
